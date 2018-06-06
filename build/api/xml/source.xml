@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/var/www/laravellApp/public">
+    <file name="index.php" size="1823" time="2018-01-03T16:52:15+00:00" unixtime="1514998335" sha1="118a54b7f1491a80bab5407e720cffe2aebd7aa8" xml="tokens/index.php.xml"/>
+  </dir>
+</source>
