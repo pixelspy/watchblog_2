@@ -46761,7 +46761,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       fetch(page_url).then(function (res) {
         return res.json();
       }).then(function (res) {
-        _this.categories = res.data;
+        _this.category = res.data;
       }).catch(function (err) {
         return console.log(err);
       });

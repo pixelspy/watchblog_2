@@ -26,7 +26,7 @@
         fetch(page_url)
         .then(res => res.json())
         .then(res => {
-          this.categories = res.data;
+          this.category = res.data;
         })
         .catch(err => console.log(err));
       },
@@ -34,3 +34,13 @@
     }
   }
 </script>
+
+<!-- 
+// fetchCategory(id) {
+//   fetch(`api/category/${id}`)
+//   .then(res => res.json())
+//   .then(res => {
+//     this.category = res.data;
+//   })
+//   .catch(err => console.log(err));
+// }, -->
