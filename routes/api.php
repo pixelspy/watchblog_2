@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 // List articles
-Route::get('articles', 'ArticlesController@index')->middleware('auth:api');
+Route::get('articles', 'ArticlesController@index');
 
 // List single article
 Route::get('article/{id}', 'ArticlesController@show');
@@ -45,3 +45,12 @@ Route::get('users', 'UsersController@index');
 //     'comments', 'CommentsController',
 //     // 'articles', 'ArticlesController'
 // ]);
+Route::post('/signup', [
+  'uses' => 'AuthentificationController@signup'
+]);
+
+Route::post('/login', 'AuthentificationController@login')->name('login');
+
+Route::middleware('auth:api')->group(function() {
+  Route::get('/logout', 'AuthentificationController@logout')->name('logout');
+});

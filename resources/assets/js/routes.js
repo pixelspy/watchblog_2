@@ -10,12 +10,18 @@ let routes = [
     component: require('./views/AuthView'),
     name: 'authlogin'
   },
+  {
+    path: '/signup',
+    component: require('./components/Signup'),
+    name: 'signup'
+  },
 
   {
     path: '/articles',
     component: require('./components/Articles'),
     name: 'articles'
   },
+
   {
     path: '/categories',
     component: require('./components/Categories'),

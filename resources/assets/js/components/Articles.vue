@@ -25,8 +25,8 @@
       <h3>{{article.title}}</h3>
       <p>{{article.body}}</p>
       <hr>
-      <button @click="editArticle(article)" class="btn btn-warning mb-2">Edit</button>
-      <button @click="deleteArticle(article.id)" class="btn btn-danger">Delete</button>
+      <!-- <button @click="editArticle(article)" class="btn btn-warning mb-2">Edit</button>
+      <button @click="deleteArticle(article.id)" class="btn btn-danger">Delete</button> -->
     </div>
   </div>
 </template>
