@@ -42,7 +42,7 @@
 
 #signUp_btn {
   background-color: $brand-blue;
-  border-radius: 5px;
+  // border-radius: 5px;
   border: none;
   padding: 15px;
   text-align: center;
@@ -56,3 +56,38 @@
   justify-content: space-between;
   flex-direction: row;
 }
+
+.dropbtn {
+    background-color: $brand-blue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $brand-dark-grey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+  color: $brand-blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: $brand-blue; color: $brand-dark-grey}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: $brand-dark-grey; color: $brand-blue ;}

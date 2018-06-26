@@ -1,8 +1,9 @@
 <template>
   <div  class="cat_list">
     <div v-for="category in categories">
-      <router-link :to="{ name: 'category', params: { categoryID: category.id }}" id="logo_header"><h3>{{category.name}}</h3></router-link>
-
+      <router-link :to="{ name: 'category', params: { categoryID: category.id }}" id="logo_header">
+        <h3>{{category.name}}</h3>
+      </router-link>
     </div>
   </div>
 </template>
@@ -20,7 +21,6 @@
     },
 
     methods: {
-
       fetchCategories(page_url) {
         let vm = this;
         page_url = page_url || 'api/categories'
@@ -31,8 +31,6 @@
         })
         .catch(err => console.log(err));
       },
-    //
-    //   fetchOneCategory($id)
     }
   }
 </script>

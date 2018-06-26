@@ -37,3 +37,11 @@ Route::delete('article/{id}', 'ArticlesController@destroy');
 //  Categories
 Route::get('categories', 'CategoryController@index');
 Route::get('category/{id}', 'CategoryController@show');
+
+
+Route::get('users', 'UsersController@index');
+// 
+// Route::resource([
+//     'comments', 'CommentsController',
+//     // 'articles', 'ArticlesController'
+// ]);

@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
+use App\Http\Resources\Tag as TagResource;
+use App\Http\Resources\Comment as CommentResource;
 
 class Article extends Resource
 {
@@ -19,14 +21,23 @@ class Article extends Resource
           'id' => $this->id,
           'title' => $this->title,
           'body' => $this->body,
-          // 'category_id' => $this->category_id,
-          'category' => [
-              'name' => $this->category->name
+          'created_at' => (string)$this->created_at,
+          'updated_at' => (string)$this->updated_at,
+
+          'category' => $this->category,
+
+          'user' => [
+              'name' => $this->user->firstname . " " . $this->user->lastname
           ],
+
+          'tags' => TagResource::collection($this->tags),
+          'comments' => CommentResource::collection($this->comments),
+
+          // 'comments' => $this->comments
         ];
     }
 
-    public function with($request) { // can add other elements wiht the data
+    public function with($request) { // can add other elements with the data
         return [
             'version' => '1.0.0',
             'author_url' => url('http://mahana.com')

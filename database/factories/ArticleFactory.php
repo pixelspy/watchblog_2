@@ -7,6 +7,8 @@ $factory->define(App\Article::class, function (Faker $faker) {
     return [
         //
         'title' => $faker->text(50),
-        'body' => $faker->text(200)
+        'body' => $faker->text(200),
+        'user_id' => $faker->randomDigit,
+        'category_id' => $faker->randomDigit
     ];
 });

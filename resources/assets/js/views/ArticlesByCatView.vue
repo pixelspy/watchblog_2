@@ -1,7 +1,5 @@
 <template>
-  <div  class="container">
-    name of Category
-    
+  <div  class="container">    
     <articlesByCat></articlesByCat>
 
   </div>

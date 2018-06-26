@@ -16,10 +16,10 @@ use App\Http\Resources\User as UserResource;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/json', function () {
-    $user = User::find(1);
-    return new UserResource($user);
-});
+// Route::get('/users', function () {
+//     $user = User::find(1);
+//     return new UserResource($user);
+// });
 //
 // Route::get('/hello', function () {
 //     return 'hello';
@@ -43,3 +43,10 @@ Route::get('/json', function () {
 // Auth::routes();
 //
 // Route::get('/home', 'HomeController@index')->name('home');
+
+// Auth::routes();
+//
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/home', 'HomeController@index')->name('home');

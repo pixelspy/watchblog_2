@@ -3,13 +3,12 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
-use App\Http\Resources\Article as ArticleResource;
 
 
-class Category extends Resource
+class Tag extends Resource
 {
     /**
-     * Transform the resource into an array.
+     * Transform the resource collection into an array.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
@@ -19,8 +18,8 @@ class Category extends Resource
         return [
           'id' => $this->id,
           'name' => $this->name,
-          'articles' => ArticleResource::collection($this->articles),
+          'article_id' => $this->article_id
 
-      ];
+        ];
     }
 }

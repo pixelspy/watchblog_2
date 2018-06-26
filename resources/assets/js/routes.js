@@ -20,7 +20,7 @@ let routes = [
     component: require('./components/Navbar')
   },
   {
-    path: '/category/:categoryID',
+    path: '/:categoryID',
     component: require('./views/ArticlesByCatView'),
     name: 'category'
   }

@@ -2,16 +2,6 @@
   <div class="">
     <h2>Articles</h2>
 
-    <form class="mb-3" @submit.prevent="addArticle" method="post">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Title" v-model="article.title">
-      </div>
-      <div class="form-group">
-        <textarea type="text" class="form-control" placeholder="Body" v-model="article.body"></textarea>
-      </div>
-      <button type="submit" class="btn btn-light btn-block">Save</button>
-    </form>
-
     <!-- Pagination -->
     <nav aria-label="Page paginatione">
       <ul class="pagination">

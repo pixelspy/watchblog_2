@@ -18,7 +18,6 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
         // get articles
         $articles = Article::orderBy('created_at', 'desc')->paginate(5); // eloquent
         // return the collection of articles as a resource
@@ -41,6 +40,7 @@ class ArticlesController extends Controller
         $article->id = $request->input('article_id');
         $article->title = $request->input('title');
         $article->body = $request->input('body');
+        $article->category->name = $request->input('name');
 
         if($article->save()) {
             return new ArticleResource($article);
