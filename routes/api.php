@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 // List articles
-Route::get('articles', 'ArticlesController@index');
+Route::get('articles', 'ArticlesController@index')->middleware('auth:api');
 
 // List single article
 Route::get('article/{id}', 'ArticlesController@show');
@@ -40,7 +40,7 @@ Route::get('category/{id}', 'CategoryController@show');
 
 
 Route::get('users', 'UsersController@index');
-// 
+//
 // Route::resource([
 //     'comments', 'CommentsController',
 //     // 'articles', 'ArticlesController'

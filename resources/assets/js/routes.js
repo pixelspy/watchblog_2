@@ -6,6 +6,12 @@ let routes = [
     component: require('./views/Home')
   },
   {
+    path: '/authlogin',
+    component: require('./views/AuthView'),
+    name: 'authlogin'
+  },
+
+  {
     path: '/articles',
     component: require('./components/Articles'),
     name: 'articles'
@@ -23,7 +29,8 @@ let routes = [
     path: '/:categoryID',
     component: require('./views/ArticlesByCatView'),
     name: 'category'
-  }
+  },
+
 
 ]
 export default new VueRouter({

@@ -31,6 +31,8 @@ Vue.component ('articleCard', require ('./components/ArticleCard.vue'));
 
 Vue.component ('createArticle', require ('./components/CreateArticle.vue'));
 
+Vue.component ('authForm', require ('./components/AuthForm.vue'));
+
 
 // USER PASSPORT API :
 Vue.component(

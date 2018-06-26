@@ -15266,6 +15266,8 @@ Vue.component('articleCard', __webpack_require__(19));
 
 Vue.component('createArticle', __webpack_require__(64));
 
+Vue.component('authForm', __webpack_require__(92));
+
 // USER PASSPORT API :
 Vue.component('passport-clients', __webpack_require__(67));
 
@@ -46406,6 +46408,10 @@ var routes = [{
   path: '/',
   component: __webpack_require__(48)
 }, {
+  path: '/authlogin',
+  component: __webpack_require__(94),
+  name: 'authlogin'
+}, {
   path: '/articles',
   component: __webpack_require__(15),
   name: 'articles'
@@ -46908,30 +46914,30 @@ var render = function() {
           _vm._v("WatchBlog")
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c(
+          "div",
+          { staticClass: "id_header" },
+          [
+            _c(
+              "router-link",
+              { staticClass: "signIn", attrs: { to: "/authlogin" } },
+              [_vm._v("Sign")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              { attrs: { id: "signUp_btn", type: "button", name: "button" } },
+              [_vm._v("Get Started")]
+            )
+          ],
+          1
+        )
       ],
       1
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "id_header" }, [
-      _c("a", { staticClass: "signIn", attrs: { href: "#" } }, [
-        _vm._v("Sign In")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        { attrs: { id: "signUp_btn", type: "button", name: "button" } },
-        [_vm._v("Get Started")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -49579,6 +49585,190 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(93)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/AuthForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-24f6c47a", Component.options)
+  } else {
+    hotAPI.reload("data-v-24f6c47a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("div", { staticClass: "container" }, [
+        _c("h1", {}, [_vm._v("Sign Up")]),
+        _vm._v(" "),
+        _c("div", {}, [
+          _c("form", { attrs: { id: "" } }, [
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Name")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "input",
+                attrs: { type: "text", name: "name" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "input",
+                attrs: { type: "email", name: "email" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field has-text-right" }, [
+              _c(
+                "button",
+                { staticClass: "button is-danger", attrs: { type: "submit" } },
+                [_vm._v("\n          Submit\n        ")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-24f6c47a", module.exports)
+  }
+}
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(95)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/views/AuthView.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5319eac0", Component.options)
+  } else {
+    hotAPI.reload("data-v-5319eac0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [_c("authForm")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5319eac0", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
