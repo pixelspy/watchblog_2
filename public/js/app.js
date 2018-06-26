@@ -46483,7 +46483,20 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "container" }, [_c("categories")], 1),
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("passport-clients"),
+          _vm._v(" "),
+          _c("passport-authorized-clients"),
+          _vm._v(" "),
+          _c("passport-personal-access-tokens"),
+          _vm._v(" "),
+          _c("categories")
+        ],
+        1
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "container" }, [_c("createArticle")], 1),
       _vm._v(" "),

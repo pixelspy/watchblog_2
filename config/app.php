@@ -26,8 +26,8 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
-
+    // 'env' => env('APP_ENV', 'production'),
+    'env' => env('pOUVOUXo8RTSrqilkDy8xlhP2iAUVauGumT9mHQnHfE='),
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -165,6 +165,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+
 
 
 
